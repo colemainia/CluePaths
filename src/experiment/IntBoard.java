@@ -9,7 +9,7 @@ public class IntBoard {
 	public IntBoard(BoardCell[][] grid) { 
 		this.grid = grid;
 		calcAdjacencies();
-		targets = new HashMap<TargetKey, Set<BoardCell>>();
+		targets = new HashSet<BoardCell>();
 	}
 	private void calcAdjacencies() {  // calculated adjacent cells for each cell
 		adjMtx = new HashMap<BoardCell, Set<BoardCell>>();
@@ -25,42 +25,39 @@ public class IntBoard {
 			}
 		}
 	}
-	private void calcTargets(TargetKey key) {
+	private void calcTargets(BoardCell cell, int distance) {
 		// Initialize sets Targets and Visited
-		Set<BoardCell> tgtCells = new HashSet<BoardCell>();
+		targets.clear();
 		Set<BoardCell> visited = new HashSet<BoardCell>();
 		// Call the recursive helper
-		calcTargetsHelper(key, tgtCells, visited);
-		targets.put(key, tgtCells);
+		calcTargetsHelper(cell, distance, visited);
 	}
-	private void calcTargetsHelper(TargetKey key, Set<BoardCell> tgtCells, Set<BoardCell> visited) {
+	private void calcTargetsHelper(BoardCell cell, int distance, Set<BoardCell> visited) {
 		// base case
-		if (key.distance == 0) {
-			tgtCells.add(key.cell);
+		if (distance == 0) {
+			targets.add(cell);
 			return;
 		}
 		// mark current location as visited
-		visited.add(key.cell);
-		for (BoardCell neighbor : getAdjList(key.cell)) {
+		visited.add(cell);
+		for (BoardCell neighbor : getAdjList(cell)) {
 			// for every neighbor that has not been visited
 			if (!visited.contains(neighbor)) {
 				// clone visited
 				Set<BoardCell> nextVisited = new HashSet<BoardCell>(visited);
 				// make new key with less distance
-				TargetKey nextLevel = new TargetKey(neighbor, (key.distance - 1));
 				// recursive call
-				calcTargetsHelper(nextLevel, tgtCells, nextVisited);
+				calcTargetsHelper(neighbor, distance - 1, nextVisited);
 			}
 		}
 	}
 	public Set<BoardCell> getAdjList(BoardCell start) {return adjMtx.get(start);}
 	public Set<BoardCell> getTargets(BoardCell cell, int distance) {
-		TargetKey key = new TargetKey(cell, distance);
-		if (!targets.containsKey(key)) calcTargets(key);
-		return targets.get(key);
+		calcTargets(cell, distance);
+		return targets;
 	}
 	public BoardCell getCell(int row, int col) {return grid[row][col];}
 	private Map<BoardCell, Set<BoardCell>> adjMtx;
-	private Map<TargetKey, Set<BoardCell>> targets;
+	private Set<BoardCell> targets;
 	private BoardCell[][] grid;
 }
