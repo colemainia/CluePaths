@@ -6,7 +6,8 @@ import java.util.Set;
 public class Board {
 	private int numRows;
 	private int numColumns;
-	public static final MAX_BOARD_SIZE;
+	private static Board theInstance = new Board();
+	public static final int MAX_BOARD_SIZE;
 	private BoardCell [][] board;
 	private Map<Character,String> legend;
 	private Map<BoardCell, Set<BoardCell>> adjMatrix;
@@ -15,11 +16,11 @@ public class Board {
 	private String roomComfigFile;
 	
 	public Board getInstance(){
-		
+		return theInstance;
 	}
 	
 	public Board initialize(){
-		
+		return theInstance;
 	}
 	
 	public Board loadRoomConfig(){
