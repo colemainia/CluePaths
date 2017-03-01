@@ -24,7 +24,7 @@ public class Board {
 	}
 	
 	public Board loadRoomConfig(){
-		
+		return new Board();
 	}
 	
 	public Board loadBoardConfig(){
