@@ -9,7 +9,6 @@ import org.junit.Test;
 
 import experiment.BoardCell;
 import experiment.IntBoard;
-import experiment.TargetKey;
 
 public class IntBoardTest {
 	private IntBoard board;

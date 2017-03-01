@@ -1,0 +1,65 @@
+commit d5aa9067161997b0cd7a97299a7c6b83d2c69437
+Author: Ebenezer Koranteng <ekoranteng@mines.edu>
+Date:   Mon Feb 27 21:33:42 2017 -0700
+
+    Commented the algorithm code
+
+commit 9d4b8573789485fa50df4857094862a414dfbd7b
+Author: Coleman Hoyt <choyt@mines.edu>
+Date:   Mon Feb 27 21:13:10 2017 -0700
+
+    "We finished the methods and all the tests pass."
+
+commit 02f75ff47b09558f62b1186a2e1b7e238708a67c
+Author: Ebenezer Koranteng <ekoranteng@mines.edu>
+Date:   Mon Feb 27 19:33:18 2017 -0700
+
+    I think its working now
+
+commit 3c38c0bc56a8c9011446a77b9b6a7775e5c92f9b
+Author: Ebenezer Koranteng <ekoranteng@mines.edu>
+Date:   Mon Feb 27 19:31:04 2017 -0700
+
+    Trying to make sure both can push
+
+commit 84abf9c3af20d0c993fdbcf31748cabfd4514ab6
+Author: colemainia <choyt@mymail.mines.edu>
+Date:   Sat Feb 25 01:26:18 2017 -0700
+
+    All tests work
+
+commit 6839f0402ab988ebd0f99f65a476df4a5fae9fad
+Author: colemainia <choyt@mymail.mines.edu>
+Date:   Sat Feb 25 00:07:20 2017 -0700
+
+    Finished making all the classes, test cases work
+
+commit 5d5fb8b4d059a03cd4e926c406819bcccff8a7a6
+Author: colemainia <choyt@mymail.mines.edu>
+Date:   Fri Feb 24 20:52:37 2017 -0700
+
+    Adding methods to IntBoard
+
+commit ca7c13aff716ece38f2cad747dced8c3b56d805c
+Author: colemainia <choyt@mymail.mines.edu>
+Date:   Fri Feb 24 20:16:12 2017 -0700
+
+    Class members made
+
+commit d7920272a51da430c7756e8dbcefeeb750f49375
+Author: colemainia <choyt@mymail.mines.edu>
+Date:   Fri Feb 24 20:05:32 2017 -0700
+
+    Finished initializing
+
+commit 1b45a24b0eee46c2027bd7e723b4665ac3ef15bf
+Author: colemainia <choyt@mymail.mines.edu>
+Date:   Fri Feb 24 19:51:40 2017 -0700
+
+    Making the first class
+
+commit b8d84141f70b7fddd388e0a4a7b61f1bbff56596
+Author: Coleman Hoyt <blackoutbox72@gmail.com>
+Date:   Fri Feb 24 19:39:07 2017 -0700
+
+    Initial commit
