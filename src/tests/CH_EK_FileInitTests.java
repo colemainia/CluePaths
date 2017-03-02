@@ -25,5 +25,7 @@ public class CH_EK_FileInitTests {
 	public void test() {
 		assertTrue(1 == 1);
 	}
+	@Test
+	public void 
 	
 }
